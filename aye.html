@@ -1,0 +1,386 @@
+
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>Livia Ellen | Cermati.com Front-end Developer Entry Test</title>
+    <meta name = "description" content = "Livia Ellen | Cermati.com Front-end Developer Entry Test" />
+    <meta name = "author" content = "Livia Ellen" />
+    <meta http-equiv = "Content-Type" content = "text/html; charset = UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link href="fonts/css/all.css" rel="stylesheet">
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      max-width: 1366px;
+      margin: 0 auto;
+      padding: 0;
+      position: relative;
+    }
+    #header {
+      background-size: cover;
+      background-position: center;
+      position: relative;
+      background: #004a75 url("image/work-desk__dustin-lee.jpg");
+      background-blend-mode: multiply;
+    }
+    #header img.logo {
+      position: absolute;
+      top: 12px;
+      left: 24px;
+      width: 30px;
+    }
+    #header .headline {
+      padding: 128px 4px;
+      text-align: center;
+      color: white;
+    }
+    #header .headline h1 {
+      font-weight: 400;
+      margin:0 px;
+    }
+    #header .headline h2 {
+      margin:0 px;
+    }
+    #header .headline p {
+      max-width: 380px;
+      margin: 16px auto 40px;
+    }
+    #header .headline button {
+      
+      background: transparent;
+      border: 1px solid white;
+      padding: 10px 20px;
+      color: #ffffff;
+      border-radius: 2px;
+      font-weight: 500;
+    }
+    #header .headline button:hover {
+      background: #ffffff;
+      color: #004a75;
+    }
+    .work {
+      position: relative;
+      background: #e5e5e5;
+      padding: 16px;
+    }
+    .work .head {
+      text-align: center;
+    }
+    .work .head p {
+      max-width: 560px;
+      margin: 16px auto;
+    }
+    .work .head h2 {
+      font-weight: 400;
+    }
+    .work .tabel .box {
+      padding: 20px;
+    }
+    .work .tabel .box .text {
+      position: relative;
+      padding: 8px 20px;
+      border: 2px solid rgba(0, 0, 0, .2);
+    }
+    .work .tabel .box .text .icon {
+      position: absolute;
+      top: 16px;
+      right: 16px;
+      opacity: .4;
+      font-size: 35px;
+    }
+
+    .footer {
+      background: #004a75;
+      text-align: center;
+      padding: 32px; 
+      color: #ffffff; 
+    }
+
+    .popup {
+      position: fixed;
+      top: 0;
+      left: 0;
+      background: #e5e5e5;
+      width: 100%;
+      padding: 16px 8px;
+    }
+    .popup .content button {
+      display: block;
+      border-width: 0;
+      border-radius: 4px;
+      background: #007dbf;
+      margin: 8px 0px 6px;
+      padding: 8px 16px;
+      color: #ffffff;
+    }
+    .popup .content button:hover {
+      background: #004a75;
+    }
+    .popup.show {
+      position: relative;
+    }
+    .popup.hide {
+      z-index: 1;
+    }
+    form {
+      position: fixed;
+      color: #ffffff;
+      top: 100%;
+      left: 0;
+      background: #007bc1;
+      max-width: 640px;
+      padding: 32px;
+    }
+
+    form h2 {
+      margin: 5px 0;
+    }
+
+    form #close {
+      position: absolute;
+      top: 0px;
+      right:0px;
+      padding: 16px;
+    }
+    form button {
+      background: #ff8000;
+      color: #ffffff;
+      border-width: 0;
+      border-radius: 2px;
+      padding: 4px 8px;
+      font-weight: 500;
+      width: 100%;
+    }
+    form button:hover {
+      background: #cc6600;
+    }
+    form input {
+      padding: 4px 8px;
+      width: 100%;
+    }
+    form .cell {
+      padding-bottom: 8px;
+    }
+
+    @media (min-width: 480px) {
+      .work .tabel {
+        display: flex;
+        flex-wrap: wrap;
+      }
+      .box {
+        flex: 1;
+        min-width: 50%;
+      }
+    }
+
+    @media (min-width: 640px) {
+    form .wrapper {
+      display: table;
+      width: 100%;
+    }
+    form .wrapper .row {
+      display: table-row;
+    }
+    form .wrapper .cell {
+      display: table-cell;
+    }
+    form .wrapper .cell.button {
+      width: 128px;
+    }
+    form input {
+      width: 95%;
+    }
+  }
+
+  @media (min-width: 720px) {
+    .popup .content {
+      max-width: 720px;
+      position: relative;
+      margin: 0 auto;
+      padding-right: 90px;
+    }
+    .popup .content button {
+      position: absolute;
+      top: 0; right: 16px;
+      display: inline-block;
+      margin: 0;
+    }
+  }
+
+  @media (min-width: 960px) {
+    .box {
+      min-width: 33.33%;
+    }
+  }
+  </style>
+  </head>
+
+  <body>
+    <div class="popup show">
+  <div class="content">
+    By accessing and using this website, you acknowledge that you have read and
+    understand our <a href="#">Cookie Policy</a>, <a href="#">Privacy Policy</a>, and our <a href="#">Terms of Service</a>.
+    <button>Got it</button>
+  </div>
+</div>
+<div class="popup hide">
+  <div class="content">
+    By accessing and using this website, you acknowledge that you have read and
+    understand our <a href="#">Cookie Policy</a>, <a href="#">Privacy Policy</a>, and our <a href="#">Terms of Service</a>.
+    <button>Got it</button>
+  </div>
+</div>
+
+    <div id="header">
+  <img class="logo" src="image/y-logo-white.png" >
+  <div class="headline">
+    <h1>Hello! I'm Livia Ellen</h1>
+    <h2>Consult, Design, and Develop Websites</h2>
+    <p>
+      Have something great in mind? Feel free to contact me.
+      I'll help you to make it happen.
+    </p>
+    <button>LET'S MAKE CONTACT</button>
+  </div>
+</div>
+
+    <div class="work">
+  <div class="head" style="margin-top: 50px; margin-bottom: 50px">
+    <h2>How Can I Help You?</h2>
+    <p>
+      Our work then targeted, best practices outcomes social innovation synergy.
+      <br/>
+      Venture philanthropy, revolutionary inclusive policymaker relief. User-centered program areas scale.
+    </p>
+  </div>
+  <div class="tabel">
+      <div class="box">
+      <div class="text">
+        <h3>Consult</h3>
+        <div class="icon">
+          <i class="far fa-comments"></i>
+        </div>
+        <p>Co-create, design thinking; strengthen infrastructure resist granular. Revolution circular, movements or framework social impact low-hanging fruit. Save the world compelling revolutionary progress.</p>
+      </div>
+    </div>
+      <div class="box">
+      <div class="text">
+        <h3>Design</h3>
+        <div class="icon">
+          <i class="fas fa-paint-brush"></i>
+        </div>
+        <p>Policymaker collaborates collective impact humanitarian shared value vocabulary inspire issue outcomes agile. Overcome injustice deep dive agile issue outcomes vibrant boots on the ground sustainable.</p>
+      </div>
+    </div>
+      <div class="box">
+      <div class="text">
+        <h3>Develop</h3>
+        <div class="icon">
+          <i class="fas fa-cubes"></i>
+        </div>
+        <p>Revolutionary circular, movements a or impact framework social impact low- hanging. Save the compelling revolutionary inspire progress. Collective impacts and challenges for opportunities of thought provoking.</p>
+      </div>
+    </div>
+      <div class="box">
+      <div class="text">
+        <h3>Marketing</h3>
+        <div class="icon">
+          <i class="fas fa-bullhorn"></i>
+        </div>
+        <p>Peaceful; vibrant paradigm, collaborative cities. Shared vocabulary agile, replicable, effective altruism youth. Mobilize commitment to overcome injustice resilient, uplift social transparent effective.</p>
+      </div>
+    </div>
+      <div class="box">
+      <div class="text">
+        <h3>Manage</h3>
+        <div class="icon">
+          <i class="fas fa-tasks"></i>
+        </div>
+        <p>Change-makers innovation or shared unit of analysis. Overcome injustice outcomes strategize vibrant boots on the ground sustainable. Optimism, effective altruism invest optimism corporate social.</p>
+      </div>
+    </div>
+      <div class="box">
+      <div class="text">
+        <h3>Evolve</h3>
+        <div class="icon">
+          <i class="fas fa-chart-line"></i>
+        </div>
+        <p>Activate catalyze and impact contextualize humanitarian. Unit of analysis overcome injustice storytelling altruism. Thought leadership mass incarceration. Outcomes big data, fairness, social game-changer.</p>
+      </div>
+    </div>
+    </div>
+</div>
+
+    <div class="footer">
+&copy; 2019 Livia Ellen. All rights reserved.
+</div>
+
+    <form>
+  <h2>Get latest updates in web technologies</h2>
+  <p>
+     I write articles related to web technologies, such as design trends, development tools, UI/UX case studies and reviews, and more. Sign up to my newsletter to get them all.
+  </p>
+  <div class="wrapper">
+    <div class="row">
+      <div class="cell">
+        <input type="email" placeHolder="Email address" />
+      </div>
+      <div class="cell button">
+        <button>Count me in!</button>
+      </div>
+    </div>
+  </div>
+  <div id="close">
+    <i class="fas fa-times"></i>
+  </div>
+</form>
+
+<script src="js/jquery-3.5.1.min.js"></script>
+<script>
+      $(function() {
+
+  
+function readCookie(name) {
+    var nameEQ = name + "=";
+    var ca = document.cookie.split(';');
+    for(var i=0;i < ca.length;i++) {
+        var c = ca[i];
+        while (c.charAt(0)==' ') c = c.substring(1,c.length);
+        if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+    }
+    return null;
+}
+function eraseCookie(name) {
+    document.cookie = name+'=; Max-Age=-99999999;';
+}
+
+;
+
+  $(".popup .content button").click(function() {
+    $(".popup").slideUp();
+    $('html,body').animate({ scrollTop: 0 });
+  });
+
+  var formHeight = $('form').outerHeight();
+  $(window).scroll(function (event) {
+    var scroll = $(window).scrollTop();
+    var height = $('html').height();
+    if (height/3 < scroll && !readCookie('close')) {
+      $('form').animate({top: $(window).height() - formHeight});
+      $('form input').focus();
+    }
+  });
+
+  $("#close").click(function() {
+    $("form")
+      .stop(true,false).animate({top: $(window).height()});
+    setCookie('close', true, 10);
+  });
+});
+</script>
+  </body>
+
+</html>
